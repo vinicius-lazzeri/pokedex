@@ -1,0 +1,80 @@
+Entendendo o funcionamento do protocolo HTTP
+
+Requisição HTTP
+
+URL: https://pokeapi.co/api/v2/pokemon
+     &{Endereço}/$(path = caminho de identificação do recurso)
+
+IP: https://pokeapi.co
+
+PATH: api/v2/pokemon/1
+- Pegaria os valores do pokemon 1
+
+Requested Method: GET | POST | PUT | DELETE | PATCH
+
+Query String
+
+https://pokeapi.co/api/v2/pokemon?type=grass
+Buscaria os pokemons tipo grama
+
+- Estrutura de chave-valor
+
+Concatenação QueryString:
+https://pokeapi.co/api/v2/pokemon?type=grass&name=i\
+Buscaria os pokemons tipo grama que começam com "i"
+
+https://pokeapi.co/api/v2/pokemon?offset=4&limit=2
+
+offset = 2 → 4(deslocamento de 2)
+limit = 2
+
+Paginação da URL. 
+
+-
+Headers (São metadados da requisição, que servem para descrever ou complementar a nossa requisição)
+
+accepts: (mostrar ao servidor que aceita essas informações)
+text/html
+,application/xhtml+xml
+,application/xml;q=0.9
+,image/avif
+,image/webp
+,image/apng
+,*/*;q=0.8
+,application/signed-exchange;v=b3;q=0.9
+
+Request Headers:
+
+Configuração da nossa api:
+accept-language:
+
+pt-BR,
+pt;q=0.9,
+en-US;q=0.8,
+en;q=0.7
+
+
+Response Headers
+
+Configuração de respostas
+
+-
+
+Request Headers
+     content-type: application/json
+
+Body (O texto onde mandamos nossa requisição -- O corpo da requisição)
+
+{
+     "1" : "Teste"
+}
+
+--
+
+Status CODES: 200-299 OK | 300-399 REDIRECT | 400-499 CLIENT ERROR | 500-599 ERRO INTERNO NO SERVIDOR;
+
+Status code: 200 OK (também pode ser uma resposta)
+
+Response Headers - Resposta como ela está configurada
+
+Response Body - Resposta em si
