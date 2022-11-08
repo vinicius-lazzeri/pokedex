@@ -4,15 +4,11 @@
 }
 
 :root{
-    --cor0: #49D0B0;
-    --cor1: #F42A28;
-    --cor2: #37A5C6;
-    --cor3: #61E1CA;
-    --cor4: #f6f8fc;
+    --cor1: #f6f8fc;
 }
 
 body{
-    background-color: var(--cor4);
+    background-color: var(--cor1);
 }
 
 .content{
